@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_stickpackage_name">
+        <item>无粘包</item>
+        <item>特定字符粘包</item>
+        <item>定长粘包</item>
+        <item>动长粘包</item>
+    </string-array>
+    <string-array name="list_stickpackage_order">
+        <item>大端</item>
+        <item>小端</item>
+    </string-array>
+</resources>

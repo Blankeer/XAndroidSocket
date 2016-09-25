@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粘包设置:"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/staticpackage_spinner_chose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/list_stickpackage_name"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/staticpackage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/staticpackage_layout_specified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/staticpackage_edit_specified_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="输入特定字符头(头尾不可同时为空)"/>
+
+            <EditText
+                android:id="@+id/staticpackage_edit_specified_tail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:hint="输入特定字符尾(头尾不可同时为空)"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/staticpackage_edit_staticlen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入定长"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:id="@+id/staticpackage_layout_variablelen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大小端设置:"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/staticpackage_spinner_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/list_stickpackage_order"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/staticpackage_edit_variablelen_lensize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入len字段长度"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/staticpackage_edit_variablelen_lenindex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入len字段开始的位置"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/staticpackage_edit_variablelen_offset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入整体长度偏移"
+                android:inputType="number"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
