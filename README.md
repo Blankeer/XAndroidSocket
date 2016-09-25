@@ -67,7 +67,8 @@ public interface AbsDecodeHelper {
 }
 ```
 设计思路：一般自定义协议会设计好多个字段组成，比如：`dataLen+data+type+md5`，数据长度+数据+类型+MD5，解析处理就是把这4个字段解析出来，返回byte[4][]，便于后续处理。
-
+## Log
+日志开关：`XSocketLog.debug(true)`
 
 License
 -------
