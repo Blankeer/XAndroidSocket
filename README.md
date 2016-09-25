@@ -4,7 +4,9 @@ Socket封装，支持TCP/UDP客户端和服务端，支持自定义粘包处理�
 详见目录[TCP/UDP使用demo](https://github.com/Blankeer/XAndroidSocket/tree/master/app/src/main/java/com/blanke/xandroidsocket)
 下的例子，使用简单。
 其中只有TCP才支持支持粘包处理、验证处理、解析处理。
+
 Step 1. Add the JitPack repository to your build file
+
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
