@@ -70,7 +70,7 @@ public class XTcpClient extends BaseXSocket {
     }
 
     public static XTcpClient getTcpClient(Socket socket, TargetInfo targetInfo, TcpConnConfig connConfig) {
-        if (!socket.isConnected()) {
+        if (!socket.isClosed()) {
             ExceptionUtils.throwException("socket is closeed");
         }
         XTcpClient xTcpClient = new XTcpClient();
